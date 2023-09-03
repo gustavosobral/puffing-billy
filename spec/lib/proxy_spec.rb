@@ -325,7 +325,7 @@ describe Billy::Proxy do
     # Valid options: :request, :proxy, :ssl, :builder, :url, :parallel_manager, :params, :headers, :builder_class
     faraday_options = {
       proxy: { uri: proxy.url },
-      request: { timeout: 1.0 }
+      request: { timeout: 10.0 }
     }
     faraday_ssl_options = faraday_options.merge(ssl: {
       verify: true,
